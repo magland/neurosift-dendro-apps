@@ -3,6 +3,9 @@ FROM python:3.9
 # Install dendro
 RUN pip install dendro==0.2.12
 
+# Install kachery-cloud
+RUN pip install kachery-cloud
+
 # Install lindi
 RUN git clone https://github.com/neurodatawithoutborders/lindi.git && \
     cd lindi && \
