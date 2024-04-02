@@ -1,0 +1,36 @@
+{
+    "name": "neurosift-1",
+    "description": "Miscellaneous processors for neurosift",
+    "appImage": "ghcr.io/magland/neurosift-1:latest",
+    "appExecutable": "/app/main.py",
+    "executable": "/app/main.py",
+    "processors": [
+        {
+            "name": "neurosift-1.autocorrelograms",
+            "description": "Create autocorrelograms",
+            "label": "neurosift-1.autocorrelograms",
+            "inputs": [
+                {
+                    "name": "input",
+                    "description": "Input .nwb.zarr.json file"
+                }
+            ],
+            "inputFolders": [],
+            "outputs": [
+                {
+                    "name": "output",
+                    "description": "Output .nwb.zarr.json file"
+                }
+            ],
+            "outputFolders": [],
+            "parameters": [],
+            "attributes": [
+                {
+                    "name": "wip",
+                    "value": true
+                }
+            ],
+            "tags": []
+        }
+    ]
+}
