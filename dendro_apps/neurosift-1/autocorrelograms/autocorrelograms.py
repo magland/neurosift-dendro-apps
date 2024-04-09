@@ -31,7 +31,7 @@ class AutocorrelogramsProcessor(ProcessorBase):
         # Load the h5py-like client from remote nwb .zarr.json file
 
         with lindi.StagingArea.create('staging') as staging_area:
-            client = lindi.LindiH5pyFile.from_reference_file_system(context.input.get_url(), staging_area=staging_area)
+            client = lindi.LindiH5pyFile.from_reference_file_system(context.input.get_url(), mode='r+', staging_area=staging_area)
             # Load the spike times from the units group
             units_group = client['/units']
             assert isinstance(units_group, h5py.Group)
