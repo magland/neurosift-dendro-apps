@@ -9,12 +9,7 @@ RUN pip install kachery-cloud
 # Install lindi
 RUN git clone https://github.com/neurodatawithoutborders/lindi.git && \
     cd lindi && \
-    git checkout write && \
-    pip install -e .
-
-# Install lindi-cloud
-RUN git clone https://github.com/magland/lindi-cloud.git && \
-    cd lindi-cloud && \
+    git checkout dev && \
     pip install -e .
 
 # Copy files into the container
