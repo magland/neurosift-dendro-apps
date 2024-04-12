@@ -4,7 +4,7 @@ FROM continuumio/miniconda3
 RUN conda install -y -c conda-forge opencv
 
 # Install dendro
-RUN pip install dendro==0.2.13
+RUN pip install dendro==0.2.14
 
 # Install kachery-cloud
 RUN pip install kachery-cloud
