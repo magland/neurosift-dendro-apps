@@ -1,7 +1,10 @@
-FROM python:3.9
+FROM continuumio/miniconda3:4.10.3p0-alpine
+
+# Install opencv from conda-forge (pypi version is not sufficient)
+RUN conda install -c conda-forge opencv
 
 # Install dendro
-RUN pip install dendro==0.2.12
+RUN pip install dendro==0.2.13
 
 # Install kachery-cloud
 RUN pip install kachery-cloud
@@ -11,6 +14,9 @@ RUN git clone https://github.com/neurodatawithoutborders/lindi.git && \
     cd lindi && \
     git checkout dev && \
     pip install -e .
+
+# Install neurosift (for codecs)
+RUN pip install neurosift
 
 # Copy files into the container
 RUN mkdir /app
