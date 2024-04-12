@@ -1,7 +1,10 @@
 FROM continuumio/miniconda3
 
-# Install ffmpeg
-RUN apt-get update && apt-get install -y libgl1-mesa-glx ffmpeg libsm6 libxext6
+# Make sure dependencies for opencv are installed
+RUN apt-get update && apt-get install -y python3-opencv
+
+# # Install ffmpeg
+# RUN apt-get update && apt-get install -y libgl1-mesa-glx ffmpeg libsm6 libxext6
 
 # Install opencv from conda-forge (pypi version is not sufficient)
 RUN conda install -y -c conda-forge opencv
