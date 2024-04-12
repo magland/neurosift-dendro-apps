@@ -1,7 +1,7 @@
 FROM continuumio/miniconda3
 
 # Install opencv from conda-forge (pypi version is not sufficient)
-RUN conda install -c conda-forge opencv
+RUN conda install -y -c conda-forge opencv
 
 # Install dendro
 RUN pip install dendro==0.2.13

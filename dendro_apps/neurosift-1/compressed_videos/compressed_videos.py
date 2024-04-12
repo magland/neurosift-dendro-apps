@@ -46,6 +46,9 @@ class CompressedVideosProcessor(ProcessorBase):
                 assert isinstance(data, h5py.Dataset)
                 # conversion = data.attrs['conversion']
                 # resolution = data.attrs['resolution']
+                if 'starting_time' not in G:
+                    print(f'Skipping: {key} does not have a starting_time dataset')
+                    continue
                 starting_time_dataset = G['starting_time']
                 assert isinstance(starting_time_dataset, h5py.Dataset)
                 # starting_time = starting_time_dataset[()]
