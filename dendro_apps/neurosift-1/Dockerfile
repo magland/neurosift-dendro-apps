@@ -10,6 +10,7 @@ RUN apt-get update && apt-get install -y libgl1-mesa-glx
 RUN git clone https://github.com/flatironinstitute/dendro.git && \
     cd dendro && \
     git checkout main && \
+    cd python && \
     pip install -e .
 # RUN pip install dendro==0.2.14
 
