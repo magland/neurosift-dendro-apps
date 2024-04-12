@@ -1,7 +1,8 @@
 FROM continuumio/miniconda3
 
 # Make sure dependencies for opencv are installed
-RUN apt-get update && apt-get install -y python3-opencv
+# See https://github.com/scottlawsonbc/audio-reactive-led-strip/issues/375#issuecomment-2019851383
+RUN apt-get update && apt-get install -y python3-opencv freeglut3-dev
 
 # # Install ffmpeg
 # RUN apt-get update && apt-get install -y libgl1-mesa-glx ffmpeg libsm6 libxext6
