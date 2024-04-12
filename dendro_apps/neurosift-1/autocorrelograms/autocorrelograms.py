@@ -1,6 +1,3 @@
-#!/usr/bin/env python
-
-
 from dendro.sdk import ProcessorBase, InputFile, OutputFile
 from dendro.sdk import BaseModel, Field
 import numpy as np
@@ -8,8 +5,8 @@ import time
 
 
 class AutocorrelogramsContext(BaseModel):
-    input: InputFile = Field(description="Input .nwb.zarr.json file")
-    output: OutputFile = Field(description="Output .nwb.zarr.json file")
+    input: InputFile = Field(description="Input .nwb.lindi.json file")
+    output: OutputFile = Field(description="Output .nwb.lindi.json file")
 
 
 class AutocorrelogramsProcessor(ProcessorBase):
@@ -89,7 +86,7 @@ class AutocorrelogramsProcessor(ProcessorBase):
             colnames.append('autocorrelogram')
             units_group.attrs['colnames'] = colnames
 
-            output_path = 'output.zarr.json'
+            output_path = 'output.lindi.json'
 
             def on_store_blob(filename: str):
                 url = kcl.store_file(filename)

@@ -3,6 +3,7 @@
 
 from dendro.sdk import App
 from autocorrelograms.autocorrelograms import AutocorrelogramsProcessor
+from compressed_videos.compressed_videos import CompressedVideosProcessor
 
 app = App(
     name="neurosift-1",
@@ -13,6 +14,7 @@ app = App(
 
 
 app.add_processor(AutocorrelogramsProcessor)
+app.add_processor(CompressedVideosProcessor)
 
 if __name__ == "__main__":
     app.run()

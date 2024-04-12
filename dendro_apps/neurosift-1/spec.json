@@ -12,14 +12,41 @@
             "inputs": [
                 {
                     "name": "input",
-                    "description": "Input .nwb.zarr.json file"
+                    "description": "Input .nwb.lindi.json file"
                 }
             ],
             "inputFolders": [],
             "outputs": [
                 {
                     "name": "output",
-                    "description": "Output .nwb.zarr.json file"
+                    "description": "Output .nwb.lindi.json file"
+                }
+            ],
+            "outputFolders": [],
+            "parameters": [],
+            "attributes": [
+                {
+                    "name": "wip",
+                    "value": true
+                }
+            ],
+            "tags": []
+        },
+        {
+            "name": "neurosift-1.compressed_videos",
+            "description": "Create compressed videos",
+            "label": "neurosift-1.compressed_videos",
+            "inputs": [
+                {
+                    "name": "input",
+                    "description": "Input .nwb.lindi.json file"
+                }
+            ],
+            "inputFolders": [],
+            "outputs": [
+                {
+                    "name": "output",
+                    "description": "Output .nwb.lindi.json file"
                 }
             ],
             "outputFolders": [],

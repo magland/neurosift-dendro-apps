@@ -17,3 +17,4 @@ RUN mkdir /app
 COPY *.py /app/
 COPY autocorrelograms/*.py /app/autocorrelograms/
 COPY autocorrelograms/helpers/*.py /app/autocorrelograms/helpers/
+COPY compressed_videos/*.py /app/compressed_videos/
