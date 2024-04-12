@@ -12,7 +12,7 @@ RUN pip install kachery-cloud
 # Install lindi
 RUN git clone https://github.com/neurodatawithoutborders/lindi.git && \
     cd lindi && \
-    git checkout dev && \
+    git checkout dev && echo "aa" && \
     pip install -e .
 
 # Install neurosift (for codecs)
