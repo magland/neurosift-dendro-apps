@@ -56,6 +56,7 @@ class CompressedVideosProcessor(ProcessorBase):
                 first_chunk = data[0:50]
                 assert isinstance(first_chunk, np.ndarray)
                 max_val = np.max(first_chunk)
+                max_val = float(max_val)  # type: ignore
                 normalization_factor = 255 / max_val
                 num_timepoints_per_chunk = 500
                 chunk_size = [num_timepoints_per_chunk, data.shape[1], data.shape[2]]

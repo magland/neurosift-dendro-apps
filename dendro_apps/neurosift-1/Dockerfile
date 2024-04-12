@@ -1,4 +1,4 @@
-FROM continuumio/miniconda3:4.10.3p0-alpine
+FROM continuumio/miniconda3
 
 # Install opencv from conda-forge (pypi version is not sufficient)
 RUN conda install -c conda-forge opencv
