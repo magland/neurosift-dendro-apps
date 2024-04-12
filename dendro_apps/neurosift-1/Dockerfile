@@ -1,10 +1,10 @@
 FROM continuumio/miniconda3
 
+# Install ffmpeg
+RUN apt-get update && apt-get install -y libgl1-mesa-glx ffmpeg libsm6 libxext6
+
 # Install opencv from conda-forge (pypi version is not sufficient)
 RUN conda install -y -c conda-forge opencv
-
-# Install ffmpeg
-RUN apt-get update && apt-get install -y libgl1-mesa-glx libgl1-mesa
 
 # Install dendro from source
 RUN git clone https://github.com/flatironinstitute/dendro.git && \
