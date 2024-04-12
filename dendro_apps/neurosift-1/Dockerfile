@@ -6,8 +6,12 @@ RUN conda install -y -c conda-forge opencv
 # Install ffmpeg
 RUN apt-get update && apt-get install -y libgl1-mesa-glx
 
-# Install dendro
-RUN pip install dendro==0.2.14
+# Install dendro from source
+RUN git clone https://github.com/flatironinstitute/dendro.git && \
+    cd dendro && \
+    git checkout main && \
+    pip install -e .
+# RUN pip install dendro==0.2.14
 
 # Install kachery-cloud
 RUN pip install kachery-cloud
