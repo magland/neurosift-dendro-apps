@@ -3,6 +3,9 @@ FROM continuumio/miniconda3
 # Install opencv from conda-forge (pypi version is not sufficient)
 RUN conda install -y -c conda-forge opencv
 
+# Install ffmpeg
+RUN apt-get update && apt-get install -y libgl1-mesa-glx
+
 # Install dendro
 RUN pip install dendro==0.2.14
 
